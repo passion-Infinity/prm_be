@@ -5,7 +5,7 @@ services:
     container_name: node_server
     build:
       context: .
-      dockerfile: ./docker/Dockerfile
+      dockerfile: Dockerfile
     volumes:
       - .:/app
     command: npm run start
