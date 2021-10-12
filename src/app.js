@@ -2,7 +2,7 @@ require('dotenv/config');
 const express = require('express');
 const config = require('../config/main');
 // const connectdb = require('../config/dbconnection');
-const cors = require('cors');
+// const cors = require('cors');
 
 const { port, mongoURL } = config;
 // const regionRoutes = require('./routes/region');
@@ -10,8 +10,8 @@ const { port, mongoURL } = config;
 const app = express();
 
 // cors
-app.use(cors());
-app.options('*', cors());
+// app.use(cors());
+// app.options('*', cors());
 
 // middleware
 app.use(express.urlencoded({ extended: false }));
