@@ -17,3 +17,6 @@ phases:
       commands:
         - echo post building docker image
         - docker push nlcd/admission
+artifacts:
+  files:
+    - '**/*'
