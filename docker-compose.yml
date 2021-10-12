@@ -15,10 +15,17 @@ services:
       PORT: 3000
       MONGO_URL: 'mongodb+srv://admin:admin123@cluster0.auvyu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
       NODE_ENV: 'development'
+    networks:
+      - common
 
-mongo:
-  image: mongo
-  volumes:
-    - ./mongodb/data/db
-  ports:
-    - '27017:27017'
+  mongo:
+    image: mongo
+    volumes:
+      - ./mongodb/data/db
+    ports:
+      - '27017:27017'
+    networks:
+      - common
+
+networks:
+  common:
