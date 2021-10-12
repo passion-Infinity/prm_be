@@ -7,13 +7,6 @@ phases:
   pre_build:
     commands:
       - npm install
-      - npm ci && npm cache clean --force
   build:
     commands:
       - echo Executing Build Phase
-artifacts:
-  type: zip
-  files:
-    - package.json
-    - package-lock.json
-    - ./docker/Dockerfile
