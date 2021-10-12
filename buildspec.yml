@@ -9,6 +9,8 @@ phases:
       - npm install
       - npm ci && npm cache clean --force
   build:
+    commands:
+      - npm start
 artifacts:
   type: zip
   files:
