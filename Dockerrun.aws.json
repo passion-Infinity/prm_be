@@ -4,9 +4,7 @@
         {
             "name": "node_server",
             "image": "nlcd/admission",
-            "hostname": "node_server",
-            "essential": false,
-            "memory": 300
+            "hostname": "node_server"
         }
     ]
 }
