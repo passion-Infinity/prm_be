@@ -10,3 +10,12 @@ phases:
   build:
     commands:
       - echo Executing Build Phase
+artifacts:
+  type: zip
+  files:
+    - package.json
+    - package-lock.json
+    - Dockerrun.aws.json
+    - ./docker/Dockerfile
+    - ./src/**/*
+    - ./config/*
