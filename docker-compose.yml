@@ -19,9 +19,10 @@ services:
       - common
 
   mongo:
+    container_name: mongoDB
     image: mongo
     volumes:
-      - ./mongodb/data/db
+      - ./data:/data/dbconnection
     ports:
       - '27017:27017'
     networks:
