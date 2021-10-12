@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-version:
-      docker: 20
+      docker: 18
   pre_build:
     commands:
       - npm install
