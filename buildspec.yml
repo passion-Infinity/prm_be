@@ -3,22 +3,17 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      docker: 19
+      docker: 18
     pre_build:
       commands:
-        - echo PRE_BUILD Phase
+        - echo pre-build nodejs backend
     build:
       commands:
-        - npm install
+        - echo build nodejs backend
+        # Build the Docker images
+        - echo Building the production docker image
+        - docker build -t nlcd/admission .
     post_build:
       commands:
-        - echo POST_BUILD Phase
-artifacts:
-  files:
-    - package.json
-    - package-lock.json
-    - 'config/*'
-    - 'src/*'
-    - 'src/**/*'
-    - Dockerfile
-    - docker-compose.yml
+        - echo post building docker image
+        - docker push nlcd/admission

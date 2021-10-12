@@ -1,0 +1,12 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "containerDefinitions": [
+        {
+            "name": "node_server",
+            "image": "nlcd/admission",
+            "hostname": "node_server",
+            "essential": false,
+            "memory": 300
+        }
+    ]
+}

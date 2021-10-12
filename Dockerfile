@@ -1,13 +1,14 @@
-FROM node:10-alpine
+# Specify a base image
+FROM node:12.3.0-alpine
 
 WORKDIR /app
 
+# Install dependencies
 COPY package*.json .
-
-RUN npm install --production=true
-
+RUN npm install
 COPY . .
 
-EXPOSE 80
+EXPOSE 3000
 
+# Default command
 CMD ["npm", "run", "start"]
