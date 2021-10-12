@@ -13,3 +13,12 @@ phases:
     post_build:
       commands:
         - echo POST_BUILD Phase
+artifacts:
+  files:
+    - package.json
+    - package-lock.json
+    - 'config/*'
+    - 'src/*'
+    - 'src/**/*'
+    - Dockerfile
+    - docker-compose.yml
