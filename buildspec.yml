@@ -12,11 +12,9 @@ phases:
         - echo build nodejs backend
         # Build the Docker images
         - echo Building the production docker image
-        - docker build -t nlcd/admission .
     post_build:
       commands:
         - echo post building docker image
-        - docker push nlcd/admission
 artifacts:
   files:
     - '**/*'
