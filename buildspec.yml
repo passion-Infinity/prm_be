@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-version:
+      docker: 20
+  pre_build:
+    commands:
+      - npm install
+      - npm ci && npm cache clean --force
+  build:
+artifacts:
+  type: zip
+  files:
+    - package.json
+    - package-lock.json
+    - Dockerfile
