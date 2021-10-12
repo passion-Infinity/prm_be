@@ -10,7 +10,7 @@ phases:
       - npm ci && npm cache clean --force
   build:
     commands:
-      - npm start
+      - echo Executing Build Phase
 artifacts:
   type: zip
   files:
