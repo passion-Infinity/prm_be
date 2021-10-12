@@ -1,4 +1,4 @@
-version: '3'
+version: '3.7'
 
 services:
   node:
@@ -10,21 +10,6 @@ services:
       - .:/app
     command: npm run start
     environment:
-      PORT: 3000
+      PORT: 80
       mongoDB: mongodb+srv://admin:admin123@cluster0.auvyu.mongodb.net/Admission_University?retryWrites=true&w=majority
       NODE_ENV: 'production'
-    networks:
-      - common
-
-  mongo:
-    container_name: mongoDB
-    image: mongo
-    volumes:
-      - ./data:/data/dbconnection
-    ports:
-      - 27017:27017
-    networks:
-      - common
-
-networks:
-  common:

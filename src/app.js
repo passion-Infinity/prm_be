@@ -1,11 +1,11 @@
 require('dotenv/config');
 const express = require('express');
 const config = require('../config/main');
-const connectdb = require('../config/dbconnection');
+// const connectdb = require('../config/dbconnection');
 const cors = require('cors');
 
 const { port, mongoURL } = config;
-const regionRoutes = require('./routes/region');
+// const regionRoutes = require('./routes/region');
 
 const app = express();
 
