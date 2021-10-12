@@ -9,7 +9,3 @@ services:
     volumes:
       - .:/app
     command: npm run start
-    environment:
-      PORT: 80
-      mongoDB: mongodb+srv://admin:admin123@cluster0.auvyu.mongodb.net/Admission_University?retryWrites=true&w=majority
-      NODE_ENV: 'production'
