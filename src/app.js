@@ -18,13 +18,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // connect db
-connectdb(mongoURL);
+// connectdb(mongoURL);
 
 app.get('/', (req, res) => {
   return res.send('Hello AWS, this is my first deployment project');
 });
 
-app.use('/api/v1/regions', regionRoutes);
+// app.use('/api/v1/regions', regionRoutes);
 
 app.listen(port, () => {
   console.log(`Server running at port ${port}`);
