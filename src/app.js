@@ -6,6 +6,7 @@ const cors = require('cors');
 
 const { port, mongoURL } = config;
 const regionRoutes = require('./routes/region');
+const template = require('./template');
 
 const app = express();
 
@@ -21,7 +22,7 @@ app.use(express.json());
 connectdb(mongoURL);
 
 app.get('/', (req, res) => {
-  return res.send('Hello AWS, this is my first deployment project 123');
+  return res.send(template);
 });
 
 app.use('/api/v1/regions', regionRoutes);
