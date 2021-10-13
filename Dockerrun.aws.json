@@ -1,7 +1,12 @@
 {
-    "AWSEBDockerrunVersion": "3",
-    "Authentication": {
-        "bucket": "nlcd/admission",
-        "key": "mydockercfg"
-    }
-} 
+    "AWSEBDockerrunVersion": "1",
+    "Image": {
+        "Name": "nlcd/admission",
+        "Update": true
+    },
+    "Ports": [
+        {
+          "ContainerPort": "3000"
+        }
+    ]
+}
