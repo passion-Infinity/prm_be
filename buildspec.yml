@@ -10,7 +10,6 @@ phases:
     build:
       commands:
         - echo build nodejs backend
-        # Build the Docker images
         - echo Building the production docker image
     post_build:
       commands:

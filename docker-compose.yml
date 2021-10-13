@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+  node_server:
+    container_name: node_server
+    image: nlcd/admission
+    ports:
+      - '3000:80'
+    volumes:
+      - .:/app
+    env_file:
+      - ./config/.env
+    commands:
+      - npm run build
