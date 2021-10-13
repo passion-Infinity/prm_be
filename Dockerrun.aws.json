@@ -1,10 +1,7 @@
 {
-    "AWSEBDockerrunVersion": 2,
-    "containerDefinitions": [
-        {
-            "name": "node_server",
-            "image": "nlcd/admission",
-            "memory": 300
-        }
-    ]
-}
+    "AWSEBDockerrunVersion": "3",
+    "Authentication": {
+        "bucket": "DOC-EXAMPLE-BUCKET",
+        "key": "mydockercfg"
+    }
+} 
