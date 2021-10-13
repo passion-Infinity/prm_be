@@ -21,7 +21,7 @@ app.use(express.json());
 // connectdb(mongoURL);
 
 app.get('/', (req, res) => {
-  return res.send('Hello AWS, this is my first deployment project');
+  return res.send('Hello AWS, this is my first deployment project 123');
 });
 
 // app.use('/api/v1/regions', regionRoutes);
