@@ -1,7 +1,7 @@
 {
     "AWSEBDockerrunVersion": "3",
     "Authentication": {
-        "bucket": "DOC-EXAMPLE-BUCKET",
+        "bucket": "nlcd/admission",
         "key": "mydockercfg"
     }
 } 
