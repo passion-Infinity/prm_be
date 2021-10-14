@@ -28,8 +28,8 @@ const schoolSchema = new Schema(
       required: false,
     },
     area: {
-      type: String,
-      required: false,
+      type: Number,
+      required: true,
     },
     phone: {
       type: String,

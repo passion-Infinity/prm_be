@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const regionSchema = new Schema(
   {
     kv: {
-      type: String,
+      type: Number,
       require: true,
     },
     name: {
