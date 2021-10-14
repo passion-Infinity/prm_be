@@ -6,6 +6,7 @@ const cors = require('cors');
 
 const { port, mongoURL } = config;
 const regionRoutes = require('./routes/region');
+const schoolRoutes = require('./routes/school');
 const template = require('./template');
 
 const app = express();
@@ -26,6 +27,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/v1/regions', regionRoutes);
+app.use('/api/v1/schools', schoolRoutes);
 
 app.listen(port, () => {
   console.log(`Server running at port ${port}`);
