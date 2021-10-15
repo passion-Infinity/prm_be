@@ -1,0 +1,56 @@
+# Version
+openapi: 3.0.0
+
+# Information about Swagger
+info:
+  title: Swagger API for Admission University
+  description: This is swagger api documentation made by TDM team
+  version: 1.0.0
+  contact:
+    email: danhnlcse140655@fpt.edu.vn
+  servers:
+    -url: http://localhost:3000/
+    description: This is my local server
+    -url: http://nodejs-backend3.us-east-2.elasticbeanstalk.com/
+    description: This is my production server
+
+# Paths
+paths:
+  /api/v1/regions:
+    get:
+      summary: Returns a object include code and list regions.
+      description: Optional extended description in CommonMark or HTML
+      responses:
+        '200':
+          description: A JSON array of region information
+          content:
+            application/json:
+              schema: 
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int64
+                    example: 200
+                  data:
+                    type: array
+                    example: []
+  /api/v1/schools:
+    get:
+      summary: Returns a object include code and list schools.
+      description: Optional extended description in CommonMark or HTML
+      responses:
+        '200':
+          description: A JSON array of school information
+          content:
+            application/json:
+              schema: 
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int64
+                    example: 200
+                  data:
+                    type: array
+                    example: []
