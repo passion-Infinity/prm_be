@@ -35,6 +35,7 @@ paths:
                   data:
                     type: array
                     example: []
+
   /api/v1/schools:
     get:
       summary: Returns a object include code and list schools.
@@ -54,3 +55,123 @@ paths:
                   data:
                     type: array
                     example: []
+
+  /api/v1/users:
+    get:
+      summary: Returns a object include code and list users.
+      description: Optional extended description in CommonMark or HTML
+      responses:
+        '200':
+          description: A JSON array of user information
+          content:
+            application/json:
+              schema: 
+                type: array
+                example: []
+
+  /api/v1//users/{username}:
+    get:
+      summary: Returns a user by username.
+      parameters:
+        - name: username
+          in: path
+          required: true
+          description: The useraname of the user to return.
+          schema:
+            type: string
+            minimum: 6
+      responses:
+        '200':
+          description: A user object.
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          description: The specified username is invalid.
+        '404':
+          description: A user with the specified username was not found.
+        default:
+          description: Unexpected error
+
+  /api/v1/users:
+    post:
+      summary: Creates a user.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses: 
+        '201':
+          description: Created
+
+  /api/v1/users/login:
+    post:
+      summary: Login feature.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses: 
+        '201':
+          description: Created
+
+  /api/v1//users/{username}:
+    put:
+      summary: User will be update.
+      parameters:
+        - name: username
+          in: path
+          required: true
+          description: Delete user.
+          schema:
+            type: string
+            minimum: 6
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: A object.
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          description: The specified username is invalid.
+        '404':
+          description: A user with the specified username was not found.
+        default:
+          description: Unexpected error
+
+  /api/v1//users/{username}:
+    delete:
+      summary: User will be deleted.
+      parameters:
+        - name: username
+          in: path
+          required: true
+          description: Delete user.
+          schema:
+            type: string
+            minimum: 6
+      responses:
+        '200':
+          description: A object.
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          description: The specified username is invalid.
+        '404':
+          description: A user with the specified username was not found.
+        default:
+          description: Unexpected error

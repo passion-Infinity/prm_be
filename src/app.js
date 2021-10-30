@@ -9,6 +9,7 @@ const swaggerJsDoc = YAML.load('./swagger.api.yaml');
 const { port, mongoURL } = config;
 const regionRoutes = require('./routes/region');
 const schoolRoutes = require('./routes/school');
+const userRoutes = require('./routes/user');
 const template = require('./template');
 const app = express();
 
@@ -33,6 +34,7 @@ app.get('/', (req, res) => {
 // api route
 app.use('/api/v1/regions', regionRoutes);
 app.use('/api/v1/schools', schoolRoutes);
+app.use('/api/v1/users', userRoutes);
 
 // server
 app.listen(port, () => {
