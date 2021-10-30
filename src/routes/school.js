@@ -4,8 +4,13 @@ const School = require('../models/school.model');
 
 router.get('/', async (req, res) => {
   let filter = {};
-  if (req.query && req.query.area) {
-    filter = { area: req.query.area };
+  let area = req.query.area;
+  let name = req.query.name;
+  if (area) {
+    filter = { ...filter, area };
+  }
+  if (name) {
+    filter = { ...filter, name };
   }
   const schoolList = await School.find(filter).exec();
   if (!schoolList) {
