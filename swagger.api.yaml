@@ -69,7 +69,7 @@ paths:
                 type: array
                 example: []
 
-  /api/v1//users/{username}:
+  /api/v1/users/{username}:
     get:
       summary: Returns a user by username.
       parameters:
@@ -119,7 +119,7 @@ paths:
         '201':
           description: Created
 
-  /api/v1//users/{username}:
+  /api/v1/users/{username}:
     put:
       summary: User will be update.
       parameters:
@@ -149,7 +149,7 @@ paths:
         default:
           description: Unexpected error
 
-  /api/v1//users/{username}:
+  /api/v1/users/{username}:
     delete:
       summary: User will be deleted.
       parameters:
