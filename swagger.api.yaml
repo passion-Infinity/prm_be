@@ -79,7 +79,6 @@ paths:
           description: The useraname of the user to return.
           schema:
             type: string
-            minimum: 6
       responses:
         '200':
           description: A user object.
@@ -130,7 +129,6 @@ paths:
           description: Delete user.
           schema:
             type: string
-            minimum: 6
       requestBody:
         required: true
         content:
@@ -161,7 +159,6 @@ paths:
           description: Delete user.
           schema:
             type: string
-            minimum: 6
       responses:
         '200':
           description: A object.
