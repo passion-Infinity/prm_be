@@ -145,7 +145,8 @@ async function createOrRegisterUser(req, res, message) {
       message: `The user was ${message}`,
     });
   } catch (error) {
-    res.status(404).json({
+    res.status(201).json({
+      success: false,
       message: 'Tên đăng nhập đã tồn tại',
     });
   }
