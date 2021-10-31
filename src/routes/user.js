@@ -125,8 +125,19 @@ router.post('/register', (req, res) => {
 
 // USE FOR CREATE USER/REGISTER USER
 async function createOrRegisterUser(req, res, message) {
+  const username = req.body.username;
+
+  const userFind = await User.findOne({ username: req.body.username });
+
+  if (userFind) {
+    return res.status(200).json({
+      success: false,
+      message: 'Tên đăng nhập đã tồn tại',
+    });
+  }
+
   let user = new User({
-    username: req.body.username,
+    username: username,
     fullname: req.body.fullname,
     password: req.body.password,
   });
@@ -145,10 +156,7 @@ async function createOrRegisterUser(req, res, message) {
       message: `The user was ${message}`,
     });
   } catch (error) {
-    res.status(201).json({
-      success: false,
-      message: 'Tên đăng nhập đã tồn tại',
-    });
+    console.log(error);
   }
 }
 
