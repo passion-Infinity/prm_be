@@ -111,7 +111,7 @@ router.post('/login', async (req, res) => {
       token: token,
     });
   } else {
-    res.status(400).json({
+    res.status(200).json({
       success: false,
       message: 'Username or Password is wrong',
     });
