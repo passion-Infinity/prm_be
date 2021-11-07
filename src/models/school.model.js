@@ -43,6 +43,10 @@ const schoolSchema = new Schema(
       type: String,
       required: false,
     },
+    nosign: {
+      type: String,
+      required: false,
+    },
     address: {
       type: String,
       required: false,
