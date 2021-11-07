@@ -6,13 +6,11 @@ router.get('/', async (req, res) => {
   let filter = {};
   let area = req.query.area;
   let name = req.query.name;
-  console.log('area', area);
-  console.log('name', name);
   if (area) {
     filter.area = area;
   }
   if (name) {
-    filter.name = new RegExp(name, 'i');
+    filter.nosign = new RegExp(name, 'i');
   }
 
   console.log(filter);
